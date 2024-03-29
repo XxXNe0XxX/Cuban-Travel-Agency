@@ -29,7 +29,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="w-full  px-4 py-6">
+    <section className="w-full  px-4 py-6 min-h-screen">
       <h1 className="text-center text-5xl p-4 leading-normal ">
         Frequently Asked Questions
       </h1>

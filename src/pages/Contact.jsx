@@ -1,4 +1,5 @@
-import { GiRotaryPhone } from "react-icons/gi";
+import { MdOutlinePhone } from "react-icons/md";
+
 import { MdOutlineEmail } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { AiOutlineClockCircle } from "react-icons/ai";
@@ -7,7 +8,7 @@ import EmailForm from "./EmailForm";
 const contacts = [
   {
     id: 1,
-    icon: <GiRotaryPhone />,
+    icon: <MdOutlinePhone />,
     text: "Phone Number: +123456789",
   },
   {
@@ -38,24 +39,26 @@ const Contact = () => {
           className="w-full h-full  object-cover"
           src="/src/assets/mock-image-1.jpg"
         ></img>
-        <h1 className="absolute bottom-0 w-full bg-[rgba(0,0,0,0.3)]   text-4xl font-sans h-full flex items-center justify-center">
-          Contact Us
-        </h1>
+        <div className="absolute bottom-0 w-full bg-[rgba(0,0,0,0.3)] h-full flex items-center justify-center">
+          <span className="text-white  font-sans text-6xl font-bold ">
+            Contact Us
+          </span>
+        </div>
       </div>
-      <div className="flex flex-wrap items-center justify-around gap-8 w-full p-12 m-auto">
-        <ul className="flex  font-sans text-md font-thin w-fit tracking-widest    flex-col gap-3">
+      <div className="flex items-center justify-around gap-8 w-full p-12 ">
+        <ul className="flex  font-sans text-md   justify-center flex-col gap-8">
           {contacts.map((each) => {
             return (
               <li key={each.id} className="flex items-center gap-4">
-                <span className="text-2xl rounded-full border border-white p-2 bg-green-700 ">
-                  {each.icon}
-                </span>
+                <span className="text-2xl   ">{each.icon}</span>
                 <h1 className="">{each.text}</h1>
               </li>
             );
           })}
         </ul>
-        <EmailForm></EmailForm>
+        <div className="w-[50%] flex justify-center">
+          <EmailForm></EmailForm>
+        </div>
       </div>
     </section>
   );

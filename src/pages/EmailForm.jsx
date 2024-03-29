@@ -16,7 +16,7 @@ export const EmailForm = () => {
   };
 
   return (
-    <section className="bg-gray-400 rounded-lg p-4 w-full max-w-[600px]">
+    <section className="shadow-md rounded-lg p-4 w-full  max-w-[600px]">
       <p
         ref={errRef}
         className={errMsg ? "bg-red-300 text-red-600" : " hidden"}
@@ -28,9 +28,7 @@ export const EmailForm = () => {
         onSubmit={send}
         className="flex flex-col gap-1 p-2 mx-auto space-y-1 "
       >
-        <h1 className="self-center text-2xl font-bold uppercase">
-          Talk with us
-        </h1>
+        <h1 className="self-center text-3xl  ">Let us know</h1>
         <label htmlFor="username"></label>
         <input
           id="username"
@@ -84,7 +82,7 @@ export const EmailForm = () => {
           className="bg-blue-800 p-2 my-2 font-bold text-white rounded-lg border-2 border-black"
           type="submit"
         >
-          Submit
+          Send
         </button>
       </form>
     </section>

@@ -55,9 +55,9 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-[rgba(255,255,255,0.7)] w-full shadow-md backdrop-blur-lg  sticky top-0 z-20">
       <nav
-        className="mx-auto  flex max-w-7xl items-center justify-between px-4 py-2 lg:px-8"
+        className=" mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-8  "
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -80,16 +80,16 @@ export default function Example() {
             <FaBars className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex items-center lg:gap-x-12">
+        <Popover.Group className="hidden *:bg-white *:min-w-[100px] *:text-center *:p-2 *:rounded-3xl *:shadow-xl lg:flex items-center lg:gap-x-12">
           <Link
             to="/"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Home
           </Link>
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-              Pages
+          <Popover className="relative ">
+            <Popover.Button className="flex justify-center items-center w-full gap-x-1 text-sm font-semibold leading-6 text-gray-900  ">
+              <h1>Pages</h1>
               <FaAngleDown
                 className="h-5 w-5 flex-none text-gray-400"
                 aria-hidden="true"
@@ -160,8 +160,11 @@ export default function Example() {
             FAQ
           </Link>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
+          <a
+            href="#"
+            className="text-sm font-semibold leading-6 rounded-3xl hover:bg-blue-800 bg-blue-700 min-w-[100px] text-center p-2 text-white"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
