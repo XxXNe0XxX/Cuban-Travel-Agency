@@ -25,8 +25,17 @@ const HotelCard = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div class="max-w-sm bg-slate-100 overflow-hidden w-full shadow-lg justify-self-center ">
+    <div class="max-w-sm bg-slate-100 rounded-md overflow-hidden w-full shadow-lg justify-self-center ">
       <div className="relative ">
+        <div
+          className={`${
+            breakfastIncl
+              ? "bg-green-600 absolute top-0 left-0 p-2 rounded-md text-md tracking-wider text-white"
+              : "hidden"
+          }`}
+        >
+          Breakfast Included
+        </div>
         <div className="*:h-full *:w-full *:object-cover   *:transition-all *:duration-700 group-hover:h-full duration-700  transition-all h-80 w-full overflow-hidden">
           <LazyLoadImage src={imgSrc ? imgSrc[currentIndex] : ""} />
         </div>

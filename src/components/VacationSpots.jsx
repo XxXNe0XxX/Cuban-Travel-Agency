@@ -36,6 +36,7 @@ const VacationSpots = () => {
             w-full relative shadow-lg overflow-hidden hover:shadow-2xl   transition-all group h-full rounded-3xl`}
             >
               <img
+                loading="lazy"
                 src={each.src}
                 className="object-cover w-full h-full group-hover:scale-[105%] duration-500 transition-all "
               ></img>
