@@ -32,17 +32,17 @@ export default function Tour() {
 
   return (
     <>
-      <div>
-        <MdOutlineLocationOn className="scale-150 text-green-600"></MdOutlineLocationOn>
+      <div className="">
+        <MdOutlineLocationOn className="scale-150  text-green-600"></MdOutlineLocationOn>
         <div className="flex flex-col">
           <span className=" text-sm font-medium text-gray-500">
             Destination
           </span>
-          <ListAndSearch></ListAndSearch>
+          <Select></Select>
         </div>
       </div>
       <div>
-        <FaBus className="scale-150 text-green-600"> </FaBus>
+        <FaBus className="scale-150  text-green-600"> </FaBus>
         <div className="flex flex-col ">
           <span className=" text-sm font-medium text-gray-500">Tour Type</span>
           <Select></Select>

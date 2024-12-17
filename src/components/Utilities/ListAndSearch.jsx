@@ -31,19 +31,19 @@ export default function ListAndSearch() {
         );
 
   return (
-    <div className="w-40 ">
+    <div className=" h-12 flex items-center  bg-black w-40 ">
       <Combobox value={selected} onChange={setSelected}>
-        <div className="relative mt-1">
-          <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+        <div className="relative ">
+          <div className="relative w-full cursor-default overflow-hidden rounded-md  shadow-md  ">
             <Combobox.Input
-              className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 rounded-lg text-gray-900 focus:ring-0"
+              className="w-full  text-sm p-3  text-gray-900 "
               displayValue={(person) => person.name}
               onChange={(event) => setQuery(event.target.value)}
             ></Combobox.Input>
 
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <FaChevronDown
-                className="h-5 w-5 text-gray-400"
+                className="h-4 w-4 text-gray-400"
                 aria-hidden="true"
               />
             </Combobox.Button>
@@ -55,7 +55,7 @@ export default function ListAndSearch() {
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options className="absolute -translate-y-[120%]  mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute -translate-y-[120%]   max-h-60 w-full overflow-auto rounded-md bg-white  text-base shadow-lg ">
               {filteredPeople.length === 0 && query !== "" ? (
                 <div className="relative cursor-default select-none px-4 py-2 mb-44  text-gray-700">
                   Nothing found.
@@ -65,7 +65,7 @@ export default function ListAndSearch() {
                   <Combobox.Option
                     key={person.id}
                     className={({ active }) =>
-                      `relative cursor-default select-none py-2  pl-10 pr-4 ${
+                      `relative cursor-default select-none py-2  pl-2 pr-4 ${
                         active ? "bg-teal-600 text-white" : "text-gray-900"
                       }`
                     }

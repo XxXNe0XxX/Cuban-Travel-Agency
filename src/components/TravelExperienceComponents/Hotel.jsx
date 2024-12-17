@@ -107,7 +107,7 @@ const data = [
 ];
 const Hotel = () => {
   return (
-    <div className="grid grid-cols-4 gap-12 grid-rows-2 grid-flow-dense">
+    <div className="gap-12 flex justify-center *:w-72 flex-wrap grid-flow-dense">
       {data.map((each, i) => {
         return <HotelCard key={data.id} data={each}></HotelCard>;
       })}

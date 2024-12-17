@@ -5,8 +5,8 @@ import VacationSpots from "./VacationSpots";
 
 const Home = () => {
   return (
-    <main className="flex flex-col space-y-40 items-around content-around *:min-h-screen ">
-      <section className="sm:px-24  py-4">
+    <main className="flex flex-col  w-screen  *:min-h-screen ">
+      <section>
         <Carousel />
       </section>
       <section>

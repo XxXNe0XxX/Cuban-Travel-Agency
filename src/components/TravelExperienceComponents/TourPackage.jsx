@@ -103,7 +103,7 @@ const data = [
 
 const TourPackage = () => {
   return (
-    <section className="grid grid-rows-2 grid-cols-4 gap-8  ">
+    <section className="flex flex-wrap gap-12 justify-center  ">
       {data.map((each) => {
         return <CustomCard key={each.id} data={each}></CustomCard>;
       })}

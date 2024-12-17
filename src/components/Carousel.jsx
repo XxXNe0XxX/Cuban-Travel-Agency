@@ -48,47 +48,51 @@ const Carousel = () => {
   //   setCurrentIndex(index);
   // };
   return (
-    <div className=" rounded-3xl  overflow-hidden flex flex-col justify-center relative ">
-      <AnimatePresence>
-        <motion.img
-          className="absolute shadow-black -z-10 object-cover w-full h-full"
-          key={currentIndex}
-          src={images[currentIndex]}
-          variants={slideVariants}
-          initial={"initial"}
-          animate="visible"
-          exit="exit"
-        />
-      </AnimatePresence>
-      <div className="relative  w-full bg-[rgba(0,0,0,0.2)] *:rounded-3xl  h-[70vh]">
-        <div className="*:absolute *:rounded-full *:bottom-0 *:mb-20 *:sm:mb-40 *:z-10 *:text-white  *:border-[1px] *:p-2    *:transition-all">
-          <button
-            className=" sm:ml-20 ml-4 left-0 hover:bg-gray-500 "
-            onClick={handlePrevious}
-          >
-            <FaChevronLeft></FaChevronLeft>
-          </button>
-          <button
-            className=" sm:mr-20 mr-4 right-0 hover:bg-gray-500 "
-            onClick={handleNext}
-          >
-            <FaChevronRight></FaChevronRight>
-          </button>
-        </div>
+    <div className="bg-[url('/src/assets/backgrounds/bg1.jpg')] h-screen -z-10">
+      <div className="md:px-20 md:py-4 ">
+        <div className=" md:rounded-3xl  overflow-hidden flex flex-col justify-center relative shadow-xl  z-10">
+          <AnimatePresence>
+            <motion.img
+              className="absolute shadow-black -z-10 object-cover w-full h-full"
+              key={currentIndex}
+              src={images[currentIndex]}
+              variants={slideVariants}
+              initial={"initial"}
+              animate="visible"
+              exit="exit"
+            />
+          </AnimatePresence>
+          <div className="relative  w-full bg-[rgba(0,0,0,0.2)] *:rounded-3xl  h-[70vh]">
+            <div className="*:absolute *:rounded-full *:bottom-0 *:mb-20 *:sm:mb-40 *:z-10 *:text-white  *:border-[1px] *:p-2    *:transition-all">
+              <button
+                className=" sm:ml-20 ml-4 left-0 hover:bg-gray-500 "
+                onClick={handlePrevious}
+              >
+                <FaChevronLeft></FaChevronLeft>
+              </button>
+              <button
+                className=" sm:mr-20 mr-4 right-0 hover:bg-gray-500 "
+                onClick={handleNext}
+              >
+                <FaChevronRight></FaChevronRight>
+              </button>
+            </div>
 
-        <div className="absolute  flex flex-col items-center justify-center gap-10 h-[70%] bottom-0 w-full p-2 mb-20 ">
-          <h1 className="text-7xl  font-extrabold text-white">
-            Explore the tropical beauty
-          </h1>
-          <p className="text-center font-normal font-sans tracking-tight text-white text-2xl ">
-            Enim culpa ex occaecat dolor et non culpa irure pariatur.
-          </p>
-          <button className="bg-green-500 w-fit text-white font-semibold hover:text-white transition-all hover:bg-green-600 rounded-lg px-5 py-3 ">
-            Book
-          </button>
+            <div className="absolute  flex flex-col items-center justify-center gap-10 h-[70%] bottom-0 w-full p-2 mb-20 ">
+              <h1 className="text-7xl text-white  font-extrabold ">
+                Explore the tropical beauty
+              </h1>
+              <p className="text-center font-normal font-sans tracking-tight text-white text-2xl ">
+                Enim culpa ex occaecat dolor et non culpa irure pariatur.
+              </p>
+              <button className="bg-green-800 w-fit text-white font-semibold hover:text-white transition-all hover:bg-green-600 rounded-lg px-5 py-3 ">
+                Book
+              </button>
+            </div>
+          </div>
+          <CarouselMenu className=" w-full absolute "></CarouselMenu>
         </div>
       </div>
-      <CarouselMenu className=" w-full absolute "></CarouselMenu>
     </div>
   );
 };

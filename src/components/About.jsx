@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 const images = [
   {
     id: 1,
@@ -34,55 +36,72 @@ const images = [
   },
 ];
 
+const ImageWithPlaceholder = React.memo(({ src, className }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <img
+      loading="lazy"
+      src={src}
+      className={`${className} ${
+        !isLoaded ? "blur-lg scale-110" : "scale-100"
+      }`}
+      onLoad={() => setIsLoaded(true)}
+    />
+  );
+});
+
 const About = () => {
   return (
-    <section className="flex  h-screen items-center w-[80vw] m-auto">
-      <div className="w-[40%] p-4 flex flex-col leading-8 gap-4  ">
-        <h1 className="font-sans text-green-800 tracking-tighter text-6xl ">
-          About us
-        </h1>
-        <h1 className="font-sans text-3xl p-4 tracking-tight ">
-          Dolor id reprehenderit incididunt aliquip laboris fugiat elit nulla
-          labore.
-        </h1>
-        <p className="text-lg">
-          In voluptate cillum velit sint irure magna tempor culpa dolore ea
-          occaecat quis. Aute eiusmod tempor sunt exercitation commodo nulla
-          consectetur ullamco. Minim qui elit cillum quis nulla est pariatur
-          aliquip non anim. Ad consequat cupidatat consequat eu proident qui ut
-        </p>
-      </div>
-      <div className=" hidden  gap-4 *:border-2 lg:grid grid-rows-12 grid-cols-12  h-[70vh]  w-[60%]  ">
-        {images.map((each, i) => {
-          return (
-            <img
-              loading="lazy"
-              key={i}
-              src={each.src}
-              className={`
-              ${
-                i === 0
-                  ? " row-start-3 row-span-5 col-span-3 bg-green-500  shadow-lg shadow-green-500"
-                  : i === 1
-                  ? " row-start-8 col-start-8 row-span-4 col-span-4 bg-slate-500  shadow-lg shadow-slate-500"
-                  : i === 2
-                  ? " row-start-2 row-span-3 col-span-3 bg-purple-500  shadow-lg shadow-purple-500"
-                  : i === 3
-                  ? "row-span-3 col-span-8 bg-orange-500  shadow-lg shadow-orange-500"
-                  : i === 4
-                  ? " row-span-5 col-span-7 bg-pink-500  shadow-lg shadow-pink-500"
-                  : i === 5
-                  ? "row-start-1 row-span-4 col-span-4 bg-blue-500  shadow-lg shadow-blue-500"
-                  : i === 6
-                  ? " row-span-3 col-span-7 bg-yellow-500  shadow-lg shadow-yellow-500"
-                  : ""
-              }
-               rounded-xl w-full h-full object-cover `}
-            />
-          );
-        })}
-      </div>
-    </section>
+    <div className="bg-[url('/src/assets/backgrounds/bg3.jpg')] ">
+      <section className="flex md:h-screen items-center md:w-[80%] m-auto   ">
+        <div className="md:w-[40%] p-4 flex flex-col leading-8 gap-4  m-3 rounded-3xl ">
+          <h1 className="font-cursive text-green-800 tracking-tighter text-8xl ">
+            About us
+          </h1>
+          <h1 className="font-sans text-3xl p-4 tracking-tight ">
+            Dolor id reprehenderit incididunt aliquip laboris fugiat elit nulla
+            labore.
+          </h1>
+          <p className="text-lg">
+            In voluptate cillum velit sint irure magna tempor culpa dolore ea
+            occaecat quis. Aute eiusmod tempor sunt exercitation commodo nulla
+            consectetur ullamco. Minim qui elit cillum quis nulla est pariatur
+            aliquip non anim. Ad consequat cupidatat consequat eu proident qui
+            ut
+          </p>
+        </div>
+        <div className=" hidden gap-4 *:border-2 lg:grid grid-rows-12 grid-cols-12  h-[70vh]  w-[60%]  ">
+          {images.map((each, i) => {
+            return (
+              <ImageWithPlaceholder
+                key={i}
+                src={each.src}
+                className={`
+            ${
+              i === 0
+                ? " row-start-3 row-span-5 col-span-3 bg-green-500  shadow-lg shadow-green-500"
+                : i === 1
+                ? " row-start-8 col-start-8 row-span-4 col-span-4 bg-slate-500  shadow-lg shadow-slate-500"
+                : i === 2
+                ? " row-start-2 row-span-3 col-span-3 bg-purple-500  shadow-lg shadow-purple-500"
+                : i === 3
+                ? "row-span-3 col-span-8 bg-orange-500  shadow-lg shadow-orange-500"
+                : i === 4
+                ? " row-span-5 col-span-7 bg-pink-500  shadow-lg shadow-pink-500"
+                : i === 5
+                ? "row-start-1 row-span-4 col-span-4 bg-blue-500  shadow-lg shadow-blue-500"
+                : i === 6
+                ? " row-span-3 col-span-7 bg-yellow-500  shadow-lg shadow-yellow-500"
+                : ""
+            }
+            rounded-xl w-full h-full object-cover `}
+              />
+            );
+          })}
+        </div>
+      </section>
+    </div>
   );
 };
 

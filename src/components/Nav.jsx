@@ -42,10 +42,6 @@ const products = [
     icon: "",
   },
 ];
-const callsToAction = [
-  { name: "Watch demo", href: "#", icon: "" },
-  { name: "Contact sales", href: "#", icon: "" },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -57,7 +53,7 @@ export default function Example() {
   return (
     <header className="bg-[rgba(255,255,255,0.7)] w-full shadow-md backdrop-blur-lg  sticky top-0 z-20">
       <nav
-        className=" mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-8  "
+        className="  flex  items-center justify-between px-4 py-2   "
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -73,7 +69,7 @@ export default function Example() {
         <div className="flex lg:hidden items-center">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md  text-gray-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -126,17 +122,6 @@ export default function Example() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                  {callsToAction.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
               </Popover.Panel>
             </Transition>
           </Popover>
@@ -160,14 +145,14 @@ export default function Example() {
             FAQ
           </Link>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
-          <a
-            href="#"
-            className="text-sm font-semibold leading-6 rounded-3xl hover:bg-blue-800 bg-blue-700 min-w-[100px] text-center p-2 text-white"
+        <button className="hidden lg:flex lg:flex-1 lg:justify-end ">
+          <Link
+            to={"login"}
+            className="text-sm font-semibold leading-6 rounded-3xl hover:bg-blue-800 bg-blue min-w-[100px] text-center p-2 text-white"
           >
             Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
+          </Link>
+        </button>
       </nav>
       <Dialog
         as="div"

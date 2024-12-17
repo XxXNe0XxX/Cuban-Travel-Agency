@@ -3,7 +3,7 @@ import { FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col h-80 content-center justify-around items-center bg-gray-800  text-white">
+    <footer className="overflow-hidden flex flex-col h-80 content-center justify-around items-center bg-gray-800  text-white">
       <div className="flex justify-around w-full gap-5">
         <div className="flex gap-3 justify-around  w-[50%]  items-center">
           <div className="flex flex-col items-center gap-3 ">

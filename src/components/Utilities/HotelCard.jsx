@@ -26,7 +26,7 @@ const HotelCard = ({ data }) => {
 
   return (
     <div class="max-w-sm bg-slate-100 rounded-md overflow-hidden w-full shadow-lg justify-self-center ">
-      <div className="relative ">
+      <div className="relative flex items-center ">
         <div
           className={`${
             breakfastIncl
@@ -68,10 +68,10 @@ const HotelCard = ({ data }) => {
             {location}
           </p>
         </div>
-        <div class="font-bold text-2xl mb-2">{name}</div>
+        <div class="font-bold text-2xl mb-2 h-12">{name}</div>
       </div>
-      <div className="flex  h-34  items-end ">
-        <ul class="grid grid-cols-3 text-nowrap grid-rows-5 h-fit  p-2  items-center  w-full grid-flow-dense gap-1 overflow-hidden ">
+      <div className="flex items-end ">
+        <ul class="grid justify-center  grid-cols-3 text-nowrap grid-rows-5  p-2  w-full grid-flow-dense gap-1 overflow-hidden ">
           {perks.map((each, i) => {
             return (
               <li
@@ -88,7 +88,7 @@ const HotelCard = ({ data }) => {
             );
           })}
         </ul>
-        <div className="  flex flex-col items-end text-nowrap px-2">
+        <div className="  flex flex-col  items-end text-nowrap px-2">
           <p className="text-sm font-bold  text-gray-400">
             {adults} adults, {children} children
           </p>
@@ -100,7 +100,7 @@ const HotelCard = ({ data }) => {
           </p>
         </div>
       </div>
-      <div className="flex justify-between p-2 *:font-bold *:text-sm  items-end">
+      <div className="flex justify-between p-2 *:font-bold *:text-sm  items-center">
         <div className="flex flex-col justify-end">
           {beds.map((each, i) => {
             return (

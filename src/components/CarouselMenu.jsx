@@ -12,8 +12,8 @@ import SearchBar from "./SearchBar";
 const CarouselMenu = () => {
   const [show, setShow] = useState("Tour");
   return (
-    <nav className="bg-[rgba(0,0,0,0.2)] space-y-[1px] flex flex-col justify-center content-center text-gray-700 ">
-      <ul className=" *:flex *:items-center *:justify-center *:gap-2 h-12 *:p-1 *:w-full flex  w-[50%] gap-[1px] space-x-[1px]]  font-bold m-auto  rounded-t-3xl">
+    <nav className="bg-[rgba(0,0,0,0.2)] space-y-[1px] flex flex-col  justify-center content-center text-gray-700  ">
+      <ul className=" *:flex *:items-center *:justify-center *:gap-2 h-12 *:p-1 *:w-full w-full flex text-sm sm:w-[50%] gap-[1px]  font-bold m-auto  rounded-t-3xl">
         <button
           className={`transition-all ${
             show === "Tour" ? "bg-green-700 text-gray-100" : "bg-orange-200"

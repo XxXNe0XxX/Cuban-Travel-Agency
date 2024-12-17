@@ -9,11 +9,11 @@ import { RiBus2Line } from "react-icons/ri";
 const TravelExperience = () => {
   const [active, setActive] = useState("Tour Package");
   return (
-    <>
-      <h1 className="font-medium text-6xl  text-green-800 tracking-tight text-center">
+    <div className="mt-12">
+      <h1 className="font-medium text-8xl font-cursive  text-green-800 tracking-tight text-center">
         Travel Experience
       </h1>
-      <ul className="flex *:p-3  justify-around *:rounded-3xl *:justify-center  *:flex *:items-center *:text-lg    *:gap-2 *:text-center *:w-full text-nowrap  w-[30%] m-auto p-6 my-4 gap-4 *:cursor-pointer ">
+      <ul className="flex *:p-3 justify-center *:rounded-3xl *:justify-center  *:flex *:items-center *:text-lg    *:gap-2 *:text-center *:w-full text-nowrap  w-[30%] m-auto p-6 my-4 gap-4 *:cursor-pointer ">
         <li
           className={`border-white ${
             active === "Tour Package"
@@ -48,7 +48,7 @@ const TravelExperience = () => {
           Transport
         </li>
       </ul>
-      <div className="grid w-[80vw] m-auto  ">
+      <div className="grid  m-auto  ">
         {active === "Tour Package" ? (
           <>
             <TourPackage></TourPackage>
@@ -65,7 +65,7 @@ const TravelExperience = () => {
           ""
         )}
       </div>
-    </>
+    </div>
   );
 };
 
