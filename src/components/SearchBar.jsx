@@ -15,7 +15,7 @@ const SearchBar = ({ show }) => {
   const [transport, setTransport] = useState("");
 
   return (
-    <nav className="*:w-full *:py-1 md:flex-nowrap flex-wrap   bg-black  *:flex gap-[1px] *:justify-center *:items-center flex *:bg-orange-200  *:gap-2">
+    <nav className=" *:py-2  flex-wrap   bg-black *:px-2  *:flex gap-[1px] *:flex-grow *:justify-center *:items-center flex *:bg-orange-200  *:gap-2">
       {show === "Tour" ? (
         <Tour className="" setTour={setTour}></Tour>
       ) : show === "Hotel" ? (
@@ -29,10 +29,9 @@ const SearchBar = ({ show }) => {
       ) : (
         "No Results Found"
       )}
-      <button className="group w-full sm:h-16 h-14 last-of-type:bg-green-800 hover:bg-green-600 transition-all   text-white">
-        <h1 className="group-hover:w-0  w-20 overflow-hidden transition-all ">
-          Search
-        </h1>
+
+      <button className="group-hover:w-0 !bg-green-700 text-white transition-all hover:bg-green-500 min-h-12 ">
+        <span className=" transition-all  ">Search</span>
         <FaSearch className="transition-all "></FaSearch>
       </button>
     </nav>

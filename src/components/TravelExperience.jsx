@@ -10,7 +10,7 @@ const TravelExperience = () => {
   const [active, setActive] = useState("Tour Package");
   return (
     <div className="mt-12">
-      <h1 className="font-medium text-8xl font-cursive  text-green-800 tracking-tight text-center">
+      <h1 className="font-medium md:text-8xl text-5xl font-cursive  text-green-800 tracking-tight text-center">
         Travel Experience
       </h1>
       <ul className="flex *:p-3 justify-center transition-all *:rounded-3xl *:justify-center  *:flex *:items-center *:text-lg    *:gap-2 *:text-center *:w-full text-nowrap  w-[30%] m-auto p-6 my-4 gap-4 *:cursor-pointer ">

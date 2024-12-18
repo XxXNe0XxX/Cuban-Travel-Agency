@@ -5,7 +5,7 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 const Layout = () => {
   return (
-    <div className=" max-w-screen ">
+    <div className="">
       <Nav />
       <Suspense fallback={<Loading />}>
         <Outlet />

@@ -34,9 +34,9 @@ const ImageWithPlaceholder = React.memo(({ src, location, className }) => {
 
 const VacationSpots = () => {
   return (
-    <div className=" w-screen ">
+    <div className=" ">
       <div className="backdrop-blur-sm">
-        <h1 className="text-center font-cursive text-green-800 text-8xl tracking-tighter p-8">
+        <h1 className="text-center font-cursive text-green-800 text-5xl sm:text-8xl tracking-tighter p-8">
           Make Memories
         </h1>
         <ul className=" *:rounded-3xl gap-4  p-2 *:h-[45vh] w-[80vw] m-auto  grid grid-rows-2 grid-cols-1 sm:grid-cols-9 grid-flow-row-dense ">

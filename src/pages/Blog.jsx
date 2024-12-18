@@ -130,14 +130,14 @@ const data = [
 const Blog = () => {
   return (
     <>
-      <h1 className="text-center font-cursive text-green-600 text-8xl p-10">
+      <h1 className="text-center font-cursive text-green-600 sm:text-8xl text-5xl p-10">
         Share your experiences
       </h1>
       <section className="flex justify-center">
         <ul className="flex flex-col gap-10">
           {data.map((each) => {
             return (
-              <li className="overflow-hidden transition-all rounded-lg hover:outline-1 hover:outline-slate-500 hover:outline flex  h-48 md:w-screen max-w-[800px] m-auto  *:tracking-tight">
+              <li className="overflow-hidden transition-all rounded-lg hover:outline-1 hover:outline-slate-500 hover:outline flex  h-48 max-w-[800px] m-auto  *:tracking-tight">
                 <div className="w-[80%] p-2">
                   <h1 className=" font-semibold text-lg">{each.title}</h1>
                   <div className="flex gap-2 px-2">

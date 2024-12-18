@@ -59,7 +59,7 @@ const CarouselMenu = React.memo(() => {
     >
       <motion.ul
         role="tablist"
-        className="flex flex-row gap-px mb-[1px] w-full sm:w-1/2 rounded-t-3xl"
+        className="flex flex-row gap-px mb-[1px] w-full sm:w-1/2 rounded-t-3xl "
       >
         {navItems.map((item, index) => {
           const isActive = show === item.key;
@@ -68,7 +68,7 @@ const CarouselMenu = React.memo(() => {
               key={item.key}
               role="tab"
               aria-selected={isActive}
-              className="flex-1 items-center justify-center"
+              className="flex-1 items-center justify-center "
               variants={itemVariants}
             >
               <button

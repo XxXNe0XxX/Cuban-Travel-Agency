@@ -84,7 +84,7 @@ export default function Example() {
 
   return (
     <motion.header
-      className="bg-[rgba(255,255,255,0.7)]  shadow-md backdrop-blur-lg sticky top-0 z-20  w-screen"
+      className="bg-[rgba(255,255,255,0.7)]  shadow-md backdrop-blur-lg sticky top-0 z-20 "
       variants={navVariants}
       initial="hidden"
       animate="visible"
@@ -97,36 +97,35 @@ export default function Example() {
           <Link to="/" className="flex items-center">
             <span className="sr-only">Your Company</span>
             <motion.img
-              className="h-12 px-2 rounded-md w-auto"
+              className="h-12  rounded-md w-auto ml-2"
               src="src/assets/logo.png"
               alt="Logo"
               loading="lazy"
-              whileHover={{ scale: 1.05 }}
               transition={{ type: "tween", duration: 0.2 }}
             />
           </Link>
         </div>
-        <div className="flex lg:hidden items-center">
+        <div className="flex lg:hidden items-center ">
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md px-2 text-gray-700"
+            className="inline-flex items-center justify-center rounded-md text-gray-700"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <FaBars className="h-6 w-6" aria-hidden="true" />
+            <FaBars className="h-6 w-6 mr-2" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex items-center lg:gap-x-12">
+        <Popover.Group className="hidden lg:flex items-center lg:gap-x-12 *:shadow-md *:rounded-full *:p-2 *:w-20 text-center  ">
           <Link
             to="/"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors hover:bg-blue bg-white hover:text-white"
           >
             Home
           </Link>
-          <Popover className="relative">
+          <Popover className="relative hover:bg-blue bg-white *:hover:text-white ">
             {({ open }) => (
               <>
-                <Popover.Button className="flex justify-center items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors">
+                <Popover.Button className="flex justify-center items-center  text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors">
                   <h1>Pages</h1>
                   <FaAngleDown
                     className={classNames(
@@ -147,28 +146,28 @@ export default function Example() {
                 >
                   <Popover.Panel
                     as={motion.div}
-                    className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+                    className="w-[500px] absolute z-10 mt-6 rounded-3xl shadow-lg bg-white "
                     variants={dropdownVariants}
                     initial="hidden"
                     animate="visible"
                     exit="exit"
                   >
-                    <div className="p-4">
+                    <div className=" p-2 flex flex-col  *:border-2 *:rounded-3xl gap-1 *:h-20 ">
                       {products.map((item) => (
                         <motion.div
                           key={item.name}
-                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50 transition-colors"
+                          className="group flex items-center  rounded-lg  text-sm leading-6 hover:bg-gray-50 *:p-1 transition-colors overflow-hidden"
                           whileHover={{ scale: 1.02 }}
                           transition={{ type: "tween", duration: 0.2 }}
                         >
                           <Link
                             to={item.href}
-                            className="block font-semibold text-gray-900"
+                            className="block font-semibold text-gray-900 w-full"
                           >
                             {item.name}
-                            <span className="absolute inset-0" />
+                            <span className="inset-0" />
                           </Link>
-                          <p className="mt-1 text-gray-600">
+                          <p className=" text-gray-600 h-full flex items-center justify-center bg-gray-50 w-full">
                             {item.description}
                           </p>
                         </motion.div>
@@ -182,19 +181,19 @@ export default function Example() {
 
           <Link
             to="/tours"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors hover:bg-blue bg-white hover:text-white"
           >
             Tours
           </Link>
           <Link
             to="/contact"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors hover:bg-blue bg-white hover:text-white"
           >
             Contact
           </Link>
           <Link
             to="/faq"
-            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors"
+            className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-700 transition-colors hover:bg-blue bg-white hover:text-white"
           >
             FAQ
           </Link>
@@ -202,7 +201,7 @@ export default function Example() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             to="login"
-            className="text-sm font-semibold leading-6 rounded-3xl bg-blue min-w-[100px] text-center p-2 text-white transition-transform"
+            className="text-sm font-semibold leading-6 rounded-3xl bg-blue min-w-[100px] text-center py-2 text-white transition-transform"
             whileHover={{ scale: 1.05 }}
             style={{ display: "inline-block" }}
           >
@@ -222,7 +221,7 @@ export default function Example() {
             <motion.div className="fixed inset-0 z-10 bg-black/20 backdrop-blur-sm" />
             <Dialog.Panel
               as={motion.div}
-              className="fixed inset-y-0 right-0 z-20 w-full bg-white px-4 py-2 sm:ring-1 sm:ring-gray-900/10 flex flex-col justify-start gap-y-3 "
+              className="fixed inset-y-0 right-0 z-20 w-full bg-white  py-2 sm:ring-1 sm:ring-gray-900/10 flex flex-col justify-start gap-y-3 "
               variants={mobileMenuVariants}
               initial="hidden"
               animate="visible"
@@ -231,28 +230,28 @@ export default function Example() {
               <div className="flex items-center justify-end">
                 <button
                   type="button"
-                  className="flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                  className="flex items-center justify-center rounded-md py-2.5 text-gray-700"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
                   <MdClose className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
-              <div className="bg-black w-full px-2 h-[1px]"></div>
+              <div className="bg-black w-full  h-[1px]"></div>
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
                     <Link
                       to="/"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className=" block rounded-lg py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Home
                     </Link>
-                    <Disclosure as="div" className="-mx-3">
+                    <Disclosure as="div" className="">
                       {({ open }) => (
                         <>
-                          <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                          <Disclosure.Button className="flex  items-center justify-between rounded-lg py-2  text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                             Pages
                             <FaAngleDown
                               className={classNames(
@@ -267,7 +266,7 @@ export default function Example() {
                               <Link
                                 key={item.name}
                                 to={item.href}
-                                className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                className="block rounded-lg py-2  text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 onClick={() => setMobileMenuOpen(false)}
                               >
                                 {item.name}
@@ -279,21 +278,21 @@ export default function Example() {
                     </Disclosure>
                     <Link
                       to="/tours"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="block rounded-lg  py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Tours
                     </Link>
                     <Link
                       to="/contact"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="block rounded-lg  py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Contact
                     </Link>
                     <Link
                       to="/faq"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="block rounded-lg  py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       FAQ
@@ -302,7 +301,7 @@ export default function Example() {
                   <div className="py-6">
                     <Link
                       to="/login"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="block rounded-lg  py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Log in

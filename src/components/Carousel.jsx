@@ -50,7 +50,7 @@ const Carousel = () => {
         <div className=" md:rounded-3xl  overflow-hidden flex flex-col justify-center relative shadow-xl z-10">
           <AnimatePresence>
             <motion.img
-              className="absolute shadow-black -z-10 object-cover w-full h-full"
+              className="absolute h-full w-full shadow-black -z-10 object-cover  "
               key={currentIndex}
               src={images[currentIndex]}
               variants={slideVariants}
@@ -59,7 +59,7 @@ const Carousel = () => {
               exit="exit"
             />
           </AnimatePresence>
-          <div className="relative  w-full bg-[rgba(0,0,0,0.2)] *:rounded-3xl  h-[70vh]">
+          <div className="relative  h-[70vh] bg-[rgba(0,0,0,0.2)] *:rounded-3xl  ">
             <div className="*:absolute *:rounded-full *:bottom-0 *:mb-20 *:sm:mb-40 *:z-10 *:text-white  *:border-[1px] *:p-2 *:transition-all">
               <button
                 className=" sm:ml-20 ml-4 left-0 hover:bg-gray-500 "

@@ -5,7 +5,7 @@ import VacationSpots from "./VacationSpots";
 
 const Home = () => {
   return (
-    <main className="flex flex-col  w-screen  *:min-h-screen ">
+    <main className="flex flex-col    ">
       <section>
         <Carousel />
       </section>
