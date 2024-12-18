@@ -22,7 +22,7 @@ const LoadingComponent = () => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-4 h-screen">
-      <div className=" shadow-lg border-2 shadow-green-500 border-blue-500 h-32 w-32 bg-blue-500 overflow-hidden rounded-full">
+      <div className="bg-blue shadow-lg border-2 shadow-green-500 border-blue-500 h-32 w-32 bg-blue-500 overflow-hidden rounded-full">
         <div
           className={` w-40 h-40 bg-green-500 duration-100 ease-in-out`}
           style={{ clipPath: clipPath }}

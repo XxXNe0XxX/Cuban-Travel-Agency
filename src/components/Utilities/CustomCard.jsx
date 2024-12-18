@@ -8,10 +8,10 @@ const CustomCard = ({ data }) => {
   return (
     <div className=" group justify-self-center relative min-w-[350px] max-w-[400px] w-full min-h-[500px] bg-white shadow-lg hover:shadow-2xl shadow-gray-400 transition-all duration-200 rounded-lg overflow-hidden">
       <div className=" relative h-96">
-        <div className="*:h-full *:w-full *:object-cover *:rounded-lg *:group-hover:rounded-none *:transition-all *:duration-700 group-hover:rounded-none group-hover:p-0 group-hover:h-full duration-700  p-3 transition-all rounded-3xl object-cover h-80 w-full overflow-hidden">
+        <div className="*:h-full  *:w-full *:object-cover *:rounded-lg *:group-hover:rounded-none *:transition-all *:duration-700 group-hover:rounded-none group-hover:p-0 group-hover:h-full duration-700  p-3 transition-all rounded-3xl object-cover h-80 w-full overflow-hidden">
           <LazyLoadImage src={imgSrc}></LazyLoadImage>
         </div>
-        <h1 className=" absolute bottom-0 group-hover:bottom-10 group-hover:text-4xl group-hover:text-white transition-all duration-500 font-bold tracking-tighter text-2xl py-1 px-2">
+        <h1 className="group-hover:drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] absolute bottom-0 group-hover:bottom-10 group-hover:text-4xl group-hover:text-white transition-all duration-500 font-bold tracking-tighter text-2xl py-1 px-2">
           Lorem ipsum dolor sit amet consectetur
         </h1>
       </div>

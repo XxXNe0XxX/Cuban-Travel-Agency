@@ -53,7 +53,7 @@ const ImageWithPlaceholder = React.memo(({ src, className }) => {
 
 const About = () => {
   return (
-    <div className="bg-[url('/src/assets/backgrounds/bg3.jpg')] ">
+    <div className="bg-[url('/src/assets/backgrounds/bg3.jpg')] max-w-screen overflow-hidden w-screen">
       <section className="flex md:h-screen items-center md:w-[80%] m-auto   ">
         <div className="md:w-[40%] p-4 flex flex-col leading-8 gap-4  m-3 rounded-3xl ">
           <h1 className="font-cursive text-green-800 tracking-tighter text-8xl ">

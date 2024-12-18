@@ -44,13 +44,10 @@ const Carousel = () => {
     );
   };
 
-  // const handleDotClick = (index) => {
-  //   setCurrentIndex(index);
-  // };
   return (
-    <div className="bg-[url('/src/assets/backgrounds/bg1.jpg')] h-screen -z-10">
-      <div className="md:px-20 md:py-4 ">
-        <div className=" md:rounded-3xl  overflow-hidden flex flex-col justify-center relative shadow-xl  z-10">
+    <div className="bg-[url('/src/assets/backgrounds/bg1.jpg')] -z-10">
+      <div className="md:px-20 md:py-4  ">
+        <div className=" md:rounded-3xl  overflow-hidden flex flex-col justify-center relative shadow-xl z-10">
           <AnimatePresence>
             <motion.img
               className="absolute shadow-black -z-10 object-cover w-full h-full"
@@ -63,7 +60,7 @@ const Carousel = () => {
             />
           </AnimatePresence>
           <div className="relative  w-full bg-[rgba(0,0,0,0.2)] *:rounded-3xl  h-[70vh]">
-            <div className="*:absolute *:rounded-full *:bottom-0 *:mb-20 *:sm:mb-40 *:z-10 *:text-white  *:border-[1px] *:p-2    *:transition-all">
+            <div className="*:absolute *:rounded-full *:bottom-0 *:mb-20 *:sm:mb-40 *:z-10 *:text-white  *:border-[1px] *:p-2 *:transition-all">
               <button
                 className=" sm:ml-20 ml-4 left-0 hover:bg-gray-500 "
                 onClick={handlePrevious}
@@ -90,7 +87,7 @@ const Carousel = () => {
               </button>
             </div>
           </div>
-          <CarouselMenu className=" w-full absolute "></CarouselMenu>
+          <CarouselMenu className=" w-full h-full "></CarouselMenu>
         </div>
       </div>
     </div>

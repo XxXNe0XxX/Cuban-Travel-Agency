@@ -34,7 +34,7 @@ const ImageWithPlaceholder = React.memo(({ src, location, className }) => {
 
 const VacationSpots = () => {
   return (
-    <div className="">
+    <div className=" w-screen ">
       <div className="backdrop-blur-sm">
         <h1 className="text-center font-cursive text-green-800 text-8xl tracking-tighter p-8">
           Make Memories
@@ -55,7 +55,7 @@ const VacationSpots = () => {
             ${i === 6 ? "col-span-3" : ""}
             ${i === 7 ? "col-span-4" : ""}
             
-            w-full relative shadow-lg overflow-hidden hover:shadow-2xl   transition-all group h-full rounded-3xl`}
+            w-full relative shadow-lg overflow-hidden hover:shadow-2xl hover:backdrop:blur-1  transition-all group h-full rounded-3xl`}
                 src={each.src}
                 location={each.location}
               ></ImageWithPlaceholder>

@@ -5,13 +5,13 @@ import Nav from "./Nav";
 import Footer from "./Footer";
 const Layout = () => {
   return (
-    <>
+    <div className=" max-w-screen ">
       <Nav />
       <Suspense fallback={<Loading />}>
         <Outlet />
       </Suspense>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -7,7 +7,12 @@ const Footer = () => {
       <div className="flex justify-around w-full gap-5">
         <div className="flex gap-3 justify-around  w-[50%]  items-center">
           <div className="flex flex-col items-center gap-3 ">
-            <img src="/src/assets/logo.png" className="w-20 h-20" alt="logo" />
+            <img
+              src="/src/assets/logo.png"
+              className="w-20 h-20"
+              alt="logo"
+              loading="lazy"
+            />
             <h1 className="uppercase">Name of the company</h1>
           </div>
           <div className="flex gap-6 justify-center items-center ">

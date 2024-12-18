@@ -39,6 +39,7 @@ export default function TourGuides() {
                   className="h-16 w-16 object-cover rounded-full"
                   src={person.imageUrl}
                   alt=""
+                  loading="lazy"
                 />
                 <div>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
